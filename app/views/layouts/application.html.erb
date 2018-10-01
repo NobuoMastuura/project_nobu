@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
-  <body>
+  <body class="d-flex flex-column" style="min-height: 100vh">
     <!-- ヘッダー部分 -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -38,7 +38,7 @@
       </nav>
     </header>
     <!-- コンテンツ部分 -->
-    <div class="container-fluid">
+    <div class="container-fluid mb-auto">
       <%= yield %>
     </div>
     <!-- フッター部分 -->
