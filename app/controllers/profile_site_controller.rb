@@ -11,7 +11,7 @@ class ProfileSiteController < ApplicationController
   end
 
   # 自分のスキルを証明するサイトの紹介
-  def product
+  def work
 
   end
 
