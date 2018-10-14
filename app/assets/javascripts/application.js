@@ -12,7 +12,7 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require_tree .
+//= require profile
 
 
 // Bootstarpと依存関係にある
