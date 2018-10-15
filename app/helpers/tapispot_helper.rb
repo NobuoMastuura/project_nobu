@@ -1,0 +1,2 @@
+module TapispotHelper
+end

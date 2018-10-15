@@ -1,0 +1,50 @@
+<div class="text-center">
+  <img src="../assets/cookie_image" alt="">
+</div>
+<div class="w-50">
+  <form class="" action="index.html" method="post">
+
+  </form>
+</div>
+
+<div class="container text-center py-3">
+  <% for fortune in @result["horoscope"]["2018/10/01"] do %>
+  <div class="p-3">
+    <h3><%= fortune["sign"] %>の運勢</h3>
+    <div class="pl-3">
+      <% case fortune["sign"]
+         when "牡牛座" %>
+         <img src="../assets/fortune_cookie/taurus" width="100" height="100" class="thumbnail m-2">
+      <% when "牡羊座" %>
+        <img src="../assets/fortune_cookie/aries" width="100" height="100" class="thumbnail m-2">
+      <% when "双子座" %>
+        <img src="../assets/fortune_cookie/gemini" width="100" height="100" class="thumbnail m-2">
+      <% when "蟹座" %>
+        <img src="../assets/fortune_cookie/cancer" width="100" height="100" class="thumbnail m-2">
+      <% when "獅子座" %>
+        <img src="../assets/fortune_cookie/leo" width="100" height="100" class="thumbnail m-2">
+      <% when "天秤座" %>
+        <img src="../assets/fortune_cookie/libra" width="100" height="100" class="thumbnail m-2">
+      <% when "乙女座" %>
+        <img src="../assets/fortune_cookie/virgo" width="100" height="100" class="thumbnail m-2">
+      <% when "射手座" %>
+        <img src="../assets/fortune_cookie/sagittarius" width="100" height="100" class="thumbnail m-2">
+      <% when "蠍座" %>
+        <img src="../assets/fortune_cookie/scorpio" width="100" height="100" class="thumbnail m-2">
+      <% when "魚座" %>
+        <img src="../assets/fortune_cookie/pisces" width="100" height="100" class="thumbnail m-2">
+      <% when "水瓶座" %>
+        <img src="../assets/fortune_cookie/aquarius" width="100" height="100" class="thumbnail m-2">
+      <% when "山羊座" %>
+        <img src="../assets/fortune_cookie/capricornus" width="100" height="100" class="thumbnail m-2">
+      <% end %>
+    </div>
+    <h5 class="pb-3">【今日の運勢】</h5>
+    <p><%= fortune["content"] %></p>
+    <h5 class="pb-3">【ラッキーアイテム】</h5>
+    <p><%= fortune["item"] %></p>
+    <h5 class="pb-3">【ラッキーカラー】</h5>
+    <p><%= fortune["color"] %></p>
+  </div>
+  <% end %>
+</div>

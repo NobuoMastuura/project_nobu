@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>タピスポ</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- モバイル適用 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+
+  <body class="d-flex flex-column" style="min-height: 100vh">
+    <!-- メインヘッダー（サイトのロゴ、タイトルなどの情報を記載する場所） -->
+    <header class="text-center bg-info py-5" id="main-header">
+      <p>サイトタイトル</p>
+    </header>
+    <!-- サブヘッダー（位置情報など、どのコンテンツの場所にいるかを記載する場所） -->
+    <div class="text-center bg-danger py-2" id="sub-header">
+      <p>サイト補足情報</p>
+    </div>
+
+    <!-- コンテンツ部分 -->
+    <div class="container-fluid mb-auto">
+      <%= yield %>
+    </div>
+
+    <!-- フッター部分 -->
+    <footer class="text-center text-secondary py-1">
+      NOBUO MATSUURA ALL Rights Reserved
+    </footer>
+
+  </body>
+</html>

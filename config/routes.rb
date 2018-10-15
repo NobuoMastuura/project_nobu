@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   get 'profile_site/work', to: 'profile_site#work'
   get 'profile_site/news', to: 'profile_site#news'
 
+  # フォーチュンクッキー
+  resources :fortune_cookie, :only => :index
+
+  # タピスポ
+  resources :tapispot
 end

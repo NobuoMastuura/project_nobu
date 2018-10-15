@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fortune_Cookie</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- モバイル適用 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  </head>
+
+  <body class="d-flex flex-column" style="min-height: 100vh">
+    <!-- ヘッダー部分 -->
+    <header class="text-center py-4">
+      <h3>フォーチュンクッキー</h3>
+      <h6 class="text-black-50"></h6>
+    </header>
+    <!-- コンテンツ部分 -->
+    <div class="container-fluid mb-auto">
+      <%= yield %>
+    </div>
+    <!-- フッター部分 -->
+    <footer class="text-center text-secondary py-1">
+      <div>
+        powerd by <a href="http://jugemkey.jp/api/">JugemKey</a>
+        【PR】<a href="http://www.tarim.co.jp/">原宿占い館 塔里木</a>
+      </div>
+      NOBUO MATSUURA ALL Rights Reserved
+    </footer>
+
+  </body>
+</html>
