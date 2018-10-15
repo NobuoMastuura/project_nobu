@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :profile_site, :only => :index
 
   root :to => 'profile_site#index'
