@@ -17,9 +17,9 @@
       <p>サイトタイトル</p>
     </header>
     <!-- サブヘッダー（位置情報など、どのコンテンツの場所にいるかを記載する場所） -->
-    <div class="text-center bg-danger py-2" id="sub-header">
+    <!-- <div class="text-center bg-danger py-2" id="sub-header">
       <p>サイト補足情報</p>
-    </div>
+    </div> -->
 
     <!-- コンテンツ部分 -->
     <div class="container-fluid mb-auto">
@@ -28,6 +28,9 @@
 
     <!-- フッター部分 -->
     <footer class="text-center text-secondary py-1">
+      <div class="text-center text-secondary">
+        <%= link_to "Topページに戻る", {controller: :profile_site, action: :index}, class: "text-secondary" %>
+      </div>
       NOBUO MATSUURA ALL Rights Reserved
     </footer>
 
