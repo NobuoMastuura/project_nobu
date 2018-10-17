@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProjectNobu</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+
+  <body class="d-flex flex-column" style="min-height: 100vh">
+    <!-- ヘッダー部分 -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <%= link_to "NobuLog", {controller: :profile_site, action: :index}, class: "navbar-brand" %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <%= link_to "Top", {controller: :profile_site, action: :index}, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Profile", {controller: :profile_site, action: :profile}, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Work", {controller: :profile_site, action: :work}, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "News", {controller: :profile_site, action: :news}, class: "nav-link" %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- コンテンツ部分 -->
+    <div class="container-fluid mb-auto">
+      <%= yield %>
+    </div>
+    <!-- フッター部分 -->
+    <footer class="text-center text-secondary py-1">
+      NOBUO MATSUURA ALL Rights Reserved
+    </footer>
+
+  </body>
+</html>
