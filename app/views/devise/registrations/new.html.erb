@@ -10,6 +10,11 @@
       </div>
 
       <div class="field">
+        <%= f.label :ユーザー名 %><br />
+        <%= f.text_field :user_name %>
+      </div>
+
+      <div class="field">
         <%= f.label :パスワード %>
         <% if @minimum_password_length %>
         <!-- 何文字以上のパスワードじゃなくてはいけないかという警告、現在の仕様でいうと6文字以上 -->
