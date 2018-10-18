@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, path:'tapispot/users'
+
   resources :profile_site, :only => :index
 
   root :to => 'profile_site#index'
@@ -12,5 +13,7 @@ Rails.application.routes.draw do
   resources :fortune_cookie, :only => :index
 
   # タピスポ
-  resources :tapispot
+  resources :tapispot do
+
+  end
 end
