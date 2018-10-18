@@ -10,7 +10,8 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+  # deviseに関連する新しいカラムは以下のように追加する
     def configure_permitted_parameters
-      # devise_parameter_sanitizer.permit(:sign_up, keys: :user_name)
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:user_name])
     end
 end

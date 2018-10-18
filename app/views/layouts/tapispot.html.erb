@@ -13,8 +13,38 @@
 
   <body class="d-flex flex-column" style="min-height: 100vh">
     <!-- メインヘッダー（サイトのロゴ、タイトルなどの情報を記載する場所） -->
-    <header class="text-center bg-info py-5" id="main-header">
-      <p>サイトタイトル</p>
+    <header class="text-center bg-info" id="main-header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-warning py-3">
+        <a class="navbar-brand" href="#"><h2>TapiSpot</h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">マイページ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">コメント</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">人気ランキング</a>
+            </li>
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0"> -->
+
+          <button class="btn btn-light my-2 my-sm-0" type="button">
+            <% if user_signed_in? %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-sm text-dark" %>
+            <% else %>
+              <%= link_to "ログイン・新規登録", user_session_path, class: "btn btn-sm text-dark" %>
+            <% end %>
+          </button>
+          <!-- </form> -->
+        </div>
+      </nav>
+
     </header>
     <!-- サブヘッダー（位置情報など、どのコンテンツの場所にいるかを記載する場所） -->
     <!-- <div class="text-center bg-danger py-2" id="sub-header">
