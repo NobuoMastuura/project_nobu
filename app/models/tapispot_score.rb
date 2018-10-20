@@ -1,0 +1,2 @@
+class TapispotScore < ApplicationRecord
+end
